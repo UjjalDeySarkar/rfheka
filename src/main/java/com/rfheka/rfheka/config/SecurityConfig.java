@@ -24,6 +24,7 @@ public class SecurityConfig {
                         .requestMatchers("/api/amenity/**").permitAll() // Public access
                         .requestMatchers("/api/homecare/categories/**").permitAll() // Public access
                         .requestMatchers("/api/homecare/services/**").permitAll() // Public access
+                        .requestMatchers("/api/rooms/**").permitAll() // Public access
                         .anyRequest().authenticated() // Everything else needs auth
                 )
                 .csrf(csrf -> csrf.disable()) // Disable CSRF for stateless API
