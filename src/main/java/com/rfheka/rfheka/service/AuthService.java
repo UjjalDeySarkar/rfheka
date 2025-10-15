@@ -48,7 +48,7 @@ public class AuthService {
 
         // Pass both email and name to JWT token
         String token = jwtUtil.generateToken(user.getEmail(), user.getName());
-        return new LoginResponse("Login successful", token);
+        return new LoginResponse("Login successful", token, user.getName());
     }
 
 }
